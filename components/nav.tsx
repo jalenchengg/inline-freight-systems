@@ -3,5 +3,5 @@ import React from "react";
 type Props = {};
 
 export default function Navbar({}: Props) {
-  return <div>1</div>;
+  return <div>2</div>;
 }
