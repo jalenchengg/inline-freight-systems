@@ -141,13 +141,13 @@ export default function Page() {
           </div>
         </div>
       </Container>
-      <Container className="mx-auto grid max-w-screen-xl grid-cols-2 gap-12 px-4">
+      <Container className="mx-auto grid max-w-screen-xl grid-cols-1 gap-12 px-4 md:grid-cols-2">
         <div className="flex h-full flex-col">
           <div className="flex flex-grow flex-col gap-6">
-            <h2 className="text-3xl leading-[99%] font-medium md:text-5xl">
+            <h2 className="text-center text-3xl leading-[99%] font-medium md:text-left md:text-5xl">
               A commitment to excellence and customer satisfication.
             </h2>
-            <p className="text-xl font-medium">
+            <p className="text-center text-xl font-medium md:text-left">
               With a strong presence in Asia and a global network of agents in
               20+ countries, Inline Freight System Inc is consistently ranked
               among the top in Transpacific cargo volume. Our proximity to your
@@ -157,6 +157,7 @@ export default function Page() {
           </div>
           <Button
             className={cn(
+              "mx-auto mt-8 md:mx-0 md:mt-0",
               buttonVariants({
                 size: "xl",
               }),
@@ -165,22 +166,22 @@ export default function Page() {
             Request a quote
           </Button>
         </div>
-        <div className="relative aspect-square overflow-hidden rounded-xl">
+        <div className="relative hidden aspect-square overflow-hidden rounded-xl md:block">
           <Image src="/bg2.png" alt="freight" fill className="object-cover" />
         </div>
       </Container>
-      <div className="relative h-screen w-full">
+      <div className="relative w-full md:h-screen">
         <div className="absolute top-0 left-0 -z-10 h-full w-full">
           <Image src="/bg3.png" alt="freight" fill className="object-cover" />
           <div className="absolute top-0 left-0 h-full w-full bg-black/20 object-cover" />
         </div>
         <div className="relative z-10 flex h-full w-full flex-col p-6">
           <div className="flex h-full flex-grow flex-col">
-            <h2 className="text-3xl leading-[99%] font-medium text-[#f7f7f7] md:text-5xl">
+            <h2 className="mb-6 text-3xl leading-[99%] font-medium text-[#f7f7f7] md:mb-0 md:text-5xl">
               Our Expertise for Your Comfort
             </h2>
           </div>
-          <div className="flex items-end justify-between">
+          <div className="flex flex-col-reverse items-start justify-between gap-4 md:flex-row md:items-end">
             <Button
               className={cn(
                 "flex items-center gap-2",
