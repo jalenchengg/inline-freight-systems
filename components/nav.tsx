@@ -4,11 +4,11 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
 
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false); 
   return (
-    <div className="w-full px-6 py-4 flex justify-between items-center relative">
+    <div className="absolute w-full px-6 flex justify-between items-center z-50">
       {/* Logo */}
       <Link href="/">
         <Image src="/home.png" alt="Home Logo" width={93} height={50} />
@@ -32,7 +32,7 @@ export default function Navbar() {
       {/* Mobile Menu Toggle */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="md:hidden text-white font-medium tracking-wide"
+        className="md:hidden text-white text-md tracking-wide"
       >
         Menu
       </button>
@@ -40,15 +40,9 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="absolute top-full left-0 w-full bg-black text-white flex flex-col items-center py-4 md:hidden">
-          <Link href="/about" onClick={() => setIsOpen(false)}>
-            About
-          </Link>
-          <Link href="/agents" onClick={() => setIsOpen(false)}>
-            Agent Directory
-          </Link>
-          <a href="mailto:gordon@inlinefsi.com" onClick={() => setIsOpen(false)}>
-            Contact
-          </a>
+          <Link href="/about" onClick={() => setIsOpen(false)}>About</Link>
+          <Link href="/agents" onClick={() => setIsOpen(false)}>Agent Directory</Link>
+          <Link href="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
         </div>
       )}
     </div>
