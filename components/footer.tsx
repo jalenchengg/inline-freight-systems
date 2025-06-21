@@ -16,18 +16,18 @@ export default function Footer() {
         className="object-contain"
       />
       
-      <div className="flex gap-6 text-xl text-black font-medium">
+      <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-6 text-xl text-black font-medium">
         <Link href="/about">About</Link>
         <Link href="/agent-directory">Agent Directory</Link>
         <a href="mailto:gordon@inlinefsi.com">Contact</a>
       </div>
       </div>
 
-      <div className="text-xl text-black font-semibold text-center md:px-12">
-        <p>© Inline Freight Systems Inc. All rights reserved.</p>
+      <div className="">
+        <p className="text-xs text-black font-medium text-center md:flex-row md:items-end">
+          © Inline Freight Systems Inc. All rights reserved.
+        </p>
       </div>
-
-
     </div>
   )
 }
