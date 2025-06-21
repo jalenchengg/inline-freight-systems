@@ -19,7 +19,7 @@ export default function Navbar() {
         <Link href="/about" className="text-white text-sm">
           About
         </Link>
-        <Link href="/agents" className="text-white text-sm">
+        <Link href="/agent-directory" className="text-white text-sm">
           Agent Directory
         </Link>
         <a href="mailto:gordon@inlinefsi.com">
