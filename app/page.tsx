@@ -6,6 +6,7 @@ import Image from "next/image";
 
 export default function Page() {
   return (
+    
     <div className="flex flex-col">
       <div className="h-screen w-full">
         <div className="absolute top-0 left-0 -z-10 h-full w-full">
