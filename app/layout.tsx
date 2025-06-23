@@ -3,6 +3,7 @@ import { Manrope } from "next/font/google";
 import "./globals.css";
 
 import Navbar from "@/components/nav";
+import Footer from "@/components/footer";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -25,6 +26,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
