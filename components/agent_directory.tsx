@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Agent, tabs, agentData } from "@/lib/agents";
+import { tabs, agentData } from "@/lib/agents";
 
 export default function AgentDirectory() {
   const [selectedTab, setSelectedTab] = useState("Asia");

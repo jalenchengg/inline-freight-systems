@@ -1,8 +1,6 @@
 import AgentDirectory from "@/components/agent_directory";
-import Container from "@/components/container";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Archive, Computer, Globe, Ship, Speech } from "lucide-react";
 import Image from "next/image";
 
 export default function Page() {
