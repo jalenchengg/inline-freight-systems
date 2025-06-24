@@ -21,7 +21,7 @@ export default function Page() {
         <div className="relative z-10 grid h-full w-full place-items-center">
           <div className="flex w-full flex-col items-center gap-6 px-4 text-[#f7f7f7] md:w-1/3 md:px-0">
             <h1 className="text-center text-5xl leading-[99%] font-medium md:text-7xl">
-              A Directory for our Agents
+              A Directory For Our Agents
             </h1>
             <p className="text-center text-xl font-medium">
               Our extensive agent network and deep expertise in Transpacific
