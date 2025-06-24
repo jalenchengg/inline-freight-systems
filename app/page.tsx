@@ -8,7 +8,6 @@ import Image from "next/image";
 import RequestQuoteForm from "@/components/forms/request-quote-form";
 import { PartnerMarquee } from "@/components/partner-marquee";
 import { useState } from "react";
-import { Marquee } from "@/components/ui/marquee";
 
 export default function Page() {
   const [isModalOpen, setIsModalOpen] = useState(false);

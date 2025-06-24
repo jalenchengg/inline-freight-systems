@@ -11,7 +11,6 @@ import {
   FormItem,
   FormLabel,
   FormControl,
-  FormDescription,
   FormMessage,
 } from "../ui/form";
 import { Input } from "../ui/input";
@@ -79,7 +78,7 @@ export default function RequestQuoteForm({
         <DialogHeader>
           <DialogTitle>Request a Quote</DialogTitle>
           <DialogDescription>
-            Fill out the form below and we'll get back to you with a custom
+            Fill out the form below and we&apos;ll get back to you with a custom
             quote for your freight needs.
           </DialogDescription>
         </DialogHeader>
