@@ -22,7 +22,7 @@ export default function Page() {
         <div className="absolute top-0 left-0 -z-10 h-full w-full">
           <Image
             priority
-            src="/bg.png"
+            src="/msc2.png"
             alt="logo"
             fill
             className="object-cover"
@@ -186,7 +186,7 @@ export default function Page() {
       </Container>
       <div className="relative w-full md:h-screen">
         <div className="absolute top-0 left-0 -z-10 h-full w-full">
-          <Image src="/bg3.png" alt="freight" fill className="object-cover" />
+          <Image src="/ONEbg.png" alt="freight" fill className="object-cover" />
           <div className="absolute top-0 left-0 h-full w-full bg-black/20 object-cover" />
         </div>
         <div className="relative z-10 flex h-full w-full flex-col p-6">
