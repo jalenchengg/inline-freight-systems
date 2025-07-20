@@ -10,7 +10,7 @@ export default function Page() {
         <div className="absolute top-0 left-0 -z-10 h-full w-full">
           <Image
             priority
-            src="/bg.png"
+            src="/hyundaibg.png"
             alt="logo"
             fill
             className="object-cover"
