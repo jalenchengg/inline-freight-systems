@@ -63,14 +63,26 @@ export default function RequestQuoteForm({
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    // Close the modal after successful submission
-    setIsOpen(false);
-    // Reset the form
-    form.reset();
-  }
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      const response = await fetch("/api/request-quote", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      });
 
+      if (response.ok) {
+        alert("Quote request sent successfully!");
+        setIsOpen(false);
+        form.reset();
+      } else {
+        alert("Failed to send quote request.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("An error occurred while sending your request.");
+    }
+  }
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       {trigger && <DialogTrigger asChild>{trigger}</DialogTrigger>}
