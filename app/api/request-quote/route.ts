@@ -10,7 +10,7 @@ export async function POST(req: Request) {
 
     const response = await resend.emails.send({
       from: "Inline FSI Team <contact@inlinefsi.com>", // must be a verified sender domain
-      to: "couls4566@gmail.com", // where you want to receive the quote request
+      to: "gordon@inlinefsi.com", // where you want to receive the quote request
       subject: "New Quote Request",
       text: `
 New Quote Request:

@@ -16,6 +16,14 @@ export default function Navbar() {
         {/* <Link href="/about" className="text-sm text-white">
           About
         </Link> */}
+        <Link
+          href="https://cargosprint.com/"
+          target="_blank"
+          onClick={() => setIsOpen(false)}
+          className="text-sm text-white"
+        >
+          Payment
+        </Link>
         <Link href="/agent-directory" className="text-sm text-white">
           Agent Directory
         </Link>
@@ -38,7 +46,14 @@ export default function Navbar() {
           {/* <Link href="/about" onClick={() => setIsOpen(false)}>
             About
           </Link> */}
-          <Link href="/agents" onClick={() => setIsOpen(false)}>
+          <Link
+            href="https://cargosprint.com/"
+            target="_blank"
+            onClick={() => setIsOpen(false)}
+          >
+            Payment
+          </Link>
+          <Link href="/agent-directory" onClick={() => setIsOpen(false)}>
             Agent Directory
           </Link>
           <Link
