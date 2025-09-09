@@ -22,7 +22,7 @@ export default function Navbar() {
           onClick={() => setIsOpen(false)}
           className="text-sm text-white"
         >
-          Payment
+          Payment by Credit Card / ACH
         </Link>
         <Link href="/agent-directory" className="text-sm text-white">
           Agent Directory
@@ -51,7 +51,7 @@ export default function Navbar() {
             target="_blank"
             onClick={() => setIsOpen(false)}
           >
-            Payment
+            Payment by Credit Card / ACH
           </Link>
           <Link href="/agent-directory" onClick={() => setIsOpen(false)}>
             Agent Directory
