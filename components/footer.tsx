@@ -1,33 +1,134 @@
-import Image from 'next/image'
-import React from 'react'
-
-import Link from 'next/link'
-
+import Image from "next/image";
+import { brand } from "@/lib/brand";
+import Link from "next/link";
 
 export default function Footer() {
+  const linkClass = "hover:text-white transition-colors";
+
   return (
-    <div className="w-full bg-white py-2 px-2 flex flex-col items-center justify-between gap-2 md:flex-row md:px-12">
-        <div className="flex items-center gap-6">
-      <Image
-        src="/home.png"
-        alt="IFS footer logo"
-        width={147}
-        height={86}
-        className="object-contain"
-      />
-      
-      <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-6 text-xl text-black font-medium">
-        <Link href="/about">About</Link>
-        <Link href="/agent-directory">Agent Directory</Link>
-        <a href="mailto:gordon@inlinefsi.com">Contact</a>
-      </div>
+    <footer
+      className="border-t py-12"
+      style={{ background: brand.base, borderColor: "rgba(127,168,200,0.2)" }}
+    >
+      <div className="mx-auto grid max-w-6xl gap-8 px-6 text-sm md:grid-cols-4">
+        {/* Brand */}
+        <div>
+          <Image
+            src="/ifs-logo.png"
+            alt="Inline Freight Systems"
+            width={112}
+            height={65}
+            className="mb-3 h-14 w-auto"
+          />
+        </div>
+
+        {/* Company */}
+        <div style={{ color: brand.slate }}>
+          <div
+            className="mono mb-3 text-xs tracking-widest"
+            style={{ color: brand.steel }}
+          >
+            COMPANY
+          </div>
+          <ul className="space-y-2">
+            <li>
+              <Link href="/about" className={linkClass}>
+                About
+              </Link>
+            </li>
+            <li>
+              <Link href="/agent-directory" className={linkClass}>
+                Agent directory
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className={linkClass}>
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        {/* Services */}
+        <div style={{ color: brand.slate }}>
+          <div
+            className="mono mb-3 text-xs tracking-widest"
+            style={{ color: brand.steel }}
+          >
+            SERVICES
+          </div>
+          <ul className="space-y-2">
+            <li>
+              <Link href="/#services" className={linkClass}>
+                Ocean
+              </Link>
+            </li>
+            <li>
+              <Link href="/#services" className={linkClass}>
+                Air
+              </Link>
+            </li>
+            <li>
+              <Link href="/#services" className={linkClass}>
+                FTL / LTL
+              </Link>
+            </li>
+            <li>
+              <Link href="/#services" className={linkClass}>
+                Customs
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        {/* Shippers */}
+        <div style={{ color: brand.slate }}>
+          <div
+            className="mono mb-3 text-xs tracking-widest"
+            style={{ color: brand.steel }}
+          >
+            SHIPPERS
+          </div>
+          <ul className="space-y-2">
+            <li>
+              <Link href="/quote" className={linkClass}>
+                Request Link quote
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="https://cargosprint.com/"
+                target="_blank"
+                rel="noreferrer"
+                className={linkClass}
+              >
+                Pay invoice
+              </Link>
+            </li>
+            <li>
+              <Link href="/faq" className={linkClass}>
+                FAQ
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
 
-      <div className="">
-        <p className="text-xs text-black font-medium text-center md:flex-row md:items-end">
-          © Inline Freight Systems Inc. All rights reserved.
-        </p>
+      {/* Bottom bar */}
+      <div
+        className="mono mx-auto mt-10 flex max-w-6xl flex-col justify-between gap-2 border-t px-6 pt-6 text-xs sm:flex-row"
+        style={{ borderColor: "rgba(127,168,200,0.15)", color: "#3E4F61" }}
+      >
+        <span>© {new Date().getFullYear()} Inline Freight Systems</span>
+        <span className="flex gap-4">
+          <Link href="/privacy" className={linkClass}>
+            Privacy
+          </Link>
+          <Link href="/terms" className={linkClass}>
+            Terms
+          </Link>
+        </span>
       </div>
-    </div>
-  )
+    </footer>
+  );
 }
